@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Blog Website</title>
+</head>
+
+<body>
+
+  <!-- <div class="container">
+    <h1 class="mb-1">
+      <%=article.title%>
+    </h1>
+    <div class="text-muted mb-2">
+      <%=article.createdAt.toLocaleDateString() %>
+    </div>
+    <a href="/" class="btn btn-secondary">All Articles</a>
+    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+    <div>
+      <%- article.sanitizedHTML %>
+    </div>
+  </div> -->
+
+  <nav class="w-full h-16 bg-slate-100/10 border-slate-300 shadow-md">
+    <div class="flex justify-center items-center">
+        <img src="https://bharatintern.live/static/logo-d7abe237292b840869fa4f33f0e74976.png" class="w-24 mt-3" alt="">
+        <span class="inline-flex mx-2 mt-1.5 text-slate-700 font-sm font-bold">Internship Assessment</span>
+    </div>
+</nav>
+  
+  <div class="flex justify-center items-center mx-16 mt-12">
+    <h2 class="text-3xl font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-2">Review your Blog</h2>
+  </div>
+
+  <div class="flex justify-center align-center mt-16">
+    <div
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-100 dark:border-gray-100/10 drop-shadow-xl">
+      <a href="#">
+        <img class="rounded-t-lg"
+          src="https://i.ytimg.com/vi/i7qSN1JAEXM/maxresdefault.jpg"
+          alt="" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-700">
+            <%=article.title%>
+          </h5>
+        </a>
+        <div class="mb-2 mt-4 text-sm font-semibold tracking-tight text-gray-900 dark:text-zinc-600">
+          <%- article.sanitizedHTML %>
+        </div>
+        <p class="mb-3 font-medium text-gray-700 dark:text-slate-600">
+          <span>Created on: </span><%=article.createdAt.toLocaleDateString() %>
+        </p>
+
+
+        <a href="/"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-teal-400 dark:focus:ring-blue-800 mt-8 mx-1">
+          All articles
+        </a>
+
+        <a href="/articles/edit/<%= article.id %>"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-400 dark:focus:ring-blue-800 mt-8">
+          Edit
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
